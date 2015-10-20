@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			POKEMON!
+		</title>
+		<meta charset="utf-8">
+		<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAADrAAAA4AAAh6YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIAAAACIgABEgAAAAIiADMzMzMzMzMwAzMzMDMzMwADMzMAAzMzAAEzMAAAMzEAATMwAgAzMQABEwAhIAMRAAETAhESAxEAARMzMzMzEQABEjMzMzIRAAEREzMzEREAARETMzMREQABEQAzMAERAAIgAAMAACIAAAAAAwAAAACP4wAAj+MAAAABAACBAwAAg4MAAIfDAACGwwAAjGMAAIgjAACAAwAAgAMAAIADAACAAwAAjGMAAJ7zAAD+/wAA" rel="icon" type="image/x-icon" />
+		<link rel="stylesheet" href="final.css" type="text/css">
+	</head>
+		<header class="nav">
+			<ul>
+				<li id="home"> <a href="index.html"> Home </a> </li>
+				<li id="aboutus"> <a href="aboutus.html"> About Us </a> </li>
+				<li id="drop" class="pokemon"> <a href="goods">Pokemon </a> 
+					<ul id="dropping">
+						<li> <a href="fire.html"> Fire Type </a> </li>
+						<li> <a href="grass.html"> Grass Type </a> </li>
+						<li> <a href="water.html"> Water Type </a> </li>
+					</ul>
+				</li>
+			</ul>
+		</header>
+	<body>
+		<div id="main">
+			<form method="post" action="http://cmis-hsteacher/~nkieffer/place_order.php">
+				<fieldset>
+					<legend>
+						Customer Information
+					</legend>
+						Customer: <label> <input type="text" id="name" name="customer_name"/> </label>
+						<br>
+						Address: 
+						<br> 
+						<textarea name="customer_address" id="address"> </textarea>
+				</fieldset>
+				<fieldset>
+					<legend>
+						Product Info
+					</legend>
+					Item: 
+					<select name="item">
+						<option value="Torchic"> Torchic </option>
+						<option value="Blaziken"> Blaziken </option>
+						<option value="Rapidash"> Rapidash </option>
+						<option value="Vulpix"> Vulpix </option>
+						<option value="Treecko"> Treecko </option>
+						<option value="Sceptile"> Sceptile </option>
+						<option value="Seedot"> Seedot </option>
+						<option value="Lotad"> Lotad </option>
+						<option value="Mudkip"> Mudkip </option>
+						<option value="Swampert"> Swampert </option>
+						<option value="Seadra"> Seadra </option>
+						<option value="Magikarp"> Magikarp </option>
+					</select>
+					<br>
+					<label> Price: <input type="text" name="price" id ="cost"/> </label>
+				</fieldset>
+				<fieldset>
+					<legend> Shipping </legend>
+					<input name="shipping" type="radio" value="Express" id="Express"/> <label for="Express"> Express </label>
+					<input name="shipping" type="radio" value="Normal" id="Normal"/> <label for="Normal"> Normal </label>
+					<input name="shipping" type="radio" value="Forever" id="Forever"/> <label for="Forever"> Take your time </label>
+				</fieldset>
+				<label> <input type="hidden" name="student_id" value="micah1523"> </label>
+				<input type="Submit" value="Buy Now!">
+			</form>
+		</div>
+	</body>
+</html>
+

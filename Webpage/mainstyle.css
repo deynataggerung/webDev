@@ -1,0 +1,12 @@
+#progress_out{
+border : 1px solid blue;
+position: absolute;
+top: 3%;
+right: 4%;
+width: 10%;
+height: 4%;
+}
+
+#progress_in{
+
+}
