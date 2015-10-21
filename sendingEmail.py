@@ -1,21 +1,20 @@
 import smtplib
-from email.mime.text import MIMEText
 import getpass
+from email import message
 
-hostname = "smtp.gmail.com"
+hostname = "smtp.mail.com"
 pswd = getpass.getpass("Password: ")
-actual = "youraddress@gmail.com"
-fake = "huehuehue@gmail.com"
-to = "receiving@gmail.com"
+actual = "original@mail.com"
+fake = "me@spencer.sx"
+to = "target@gmail.com"
 
-payload = "Test Test Text"
-msg = MIMEText(payload)
-
-msg["Subject"] = "Phishing Test"
-msg["From"] = me
-msg["To"] = to
+m1 = message.Message()
+m1.add_header("from", fake)
+m1.add_header("to", to)
+m1.add_header("subject", "Phishing Test")
+m1.set_payload("Test Test Test")
 
 s = smtplib.SMTP_SSL(hostname, 465)
-s.login(actual, password)
-s.sendmail(fake, [to], msg.as_string())
+s.login(actual, pswd)
+s.sendmail(actual, [to], m1.as_string())
 s.quit()
