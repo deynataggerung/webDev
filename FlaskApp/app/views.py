@@ -5,8 +5,8 @@ from app import app
 @app.route('/')
 @app.route('/index')
 
-@app.route('/login')
-def login():
+#@app.route('/login')
+def index():
 	return "hello world"
 	#form = LoginForm()
 	#if form.validate_on_submit():
