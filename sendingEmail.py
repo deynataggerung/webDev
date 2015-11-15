@@ -1,6 +1,12 @@
 import smtplib
 import getpass
+import argparse
 from email import message
+
+parser = agparse.ArgumentParser(description='Process the email address')
+parser.add_argument('-f')
+args = parser.parse_args()
+print args
 
 hostname = "smtp.mail.com"
 pswd = getpass.getpass("Password: ")
